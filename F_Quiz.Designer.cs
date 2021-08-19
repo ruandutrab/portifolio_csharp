@@ -34,6 +34,7 @@ namespace Portifolio_CSharp
             this.cb_pergunta2 = new System.Windows.Forms.CheckBox();
             this.cb_pergunta3 = new System.Windows.Forms.CheckBox();
             this.cb_pergunta4 = new System.Windows.Forms.CheckBox();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tb_perguntas
@@ -85,11 +86,21 @@ namespace Portifolio_CSharp
             this.cb_pergunta4.Text = "Pergunta4";
             this.cb_pergunta4.UseVisualStyleBackColor = true;
             // 
+            // btn_voltar
+            // 
+            this.btn_voltar.Location = new System.Drawing.Point(453, 416);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
+            this.btn_voltar.TabIndex = 5;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            // 
             // F_Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 451);
+            this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.cb_pergunta4);
             this.Controls.Add(this.cb_pergunta3);
             this.Controls.Add(this.cb_pergunta2);
@@ -99,6 +110,7 @@ namespace Portifolio_CSharp
             this.Name = "F_Quiz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F_Quiz";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.F_Quiz_FormClosed);
             this.Load += new System.EventHandler(this.F_Quiz_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -112,5 +124,6 @@ namespace Portifolio_CSharp
         private System.Windows.Forms.CheckBox cb_pergunta2;
         private System.Windows.Forms.CheckBox cb_pergunta3;
         private System.Windows.Forms.CheckBox cb_pergunta4;
+        private System.Windows.Forms.Button btn_voltar;
     }
 }

@@ -12,15 +12,22 @@ namespace Portifolio_CSharp
 {
     public partial class F_Quiz : Form
     {
-        public F_Quiz()
+        Form principal;
+        public F_Quiz(Form fromPrincipal)
         {
             InitializeComponent();
+            principal = fromPrincipal;
         }
 
         private void F_Quiz_Load(object sender, EventArgs e)
         {
-            List<string> l_Pergunta = new List<string>();
-            
-         }
+            List<string> l_Pergunta = new List<string>();    
+        }
+
+        private void F_Quiz_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            principal.Visible = true;
+            Visible = false;
+        }
     }
 }
