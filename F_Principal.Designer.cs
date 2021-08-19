@@ -125,7 +125,7 @@ namespace Portifolio_CSharp
             this.Controls.Add(this.btn_jogoVelha);
             this.Controls.Add(this.btn_quiz);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "F_telaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jogos";
