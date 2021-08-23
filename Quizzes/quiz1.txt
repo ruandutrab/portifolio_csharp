@@ -1,0 +1,12 @@
+Quiz sobre o Computador 2019
+Qual a menor unidade no computador.| Block| Byte | Bit |C
+Qual é o dispostivo mais usado no computador.| Discos de Estado Sólido| Mouse| Dísco Rígido|C
+O que significa a sigla WWW ?| Wan Wide World. |World Wide Web |Wide Wan Web |B
+Qual o nome do programa usado para visualizar páginas.| Internet |Navegador Web |Page Browser |B
+Indique o programa que é um processador de textos.| Notepad. |MS-Excel |MS-Word |C
+Quantos bits existem em um único byte.| 1 |8 |4 |B
+ISP significa :|International Service Provide |Internet Service Printer |Internet Service Provider|C
+Quantos bytes existem em 2040 bits.| 255 |1024 |100 |A
+Cada sistema numérico possui uma base chamada ?|Index|Radix |Subscript|B
+Um dispositivo que converte sinal digital para análogico é chamado|Packet |Modem|Block |B
+Qual o nome do Macoratti. ? | Mac | Macora| Macoratti| C

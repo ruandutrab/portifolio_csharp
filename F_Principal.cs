@@ -12,6 +12,7 @@ namespace Portifolio_CSharp
 {
     public partial class F_telaPrincipal : Form
     {
+
         public F_telaPrincipal()
         {
             InitializeComponent();
