@@ -20,7 +20,7 @@ namespace Portifolio_CSharp
 
         private void btn_quiz_Click(object sender, EventArgs e)
         {
-            if(tb_jogador.Text != "")
+            if(!string.IsNullOrEmpty(tb_jogador.Text))
             {
                 new F_Quiz(this).Visible = true;
                 Visible = false;

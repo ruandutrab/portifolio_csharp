@@ -38,14 +38,17 @@ namespace Portifolio_CSharp
             this.lb_pergunta = new System.Windows.Forms.Label();
             this.lb_teste = new System.Windows.Forms.Label();
             this.pl_final = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lb_resultado2 = new System.Windows.Forms.Label();
             this.lb_resultado = new System.Windows.Forms.Label();
             this.pnl_perguntas = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PicProximo = new System.Windows.Forms.PictureBox();
             this.picEnabled = new System.Windows.Forms.PictureBox();
             this.PicDisabled = new System.Windows.Forms.PictureBox();
             this.pl_final.SuspendLayout();
             this.pnl_perguntas.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicProximo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnabled)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicDisabled)).BeginInit();
@@ -54,63 +57,72 @@ namespace Portifolio_CSharp
             // opcaoA
             // 
             this.opcaoA.AutoSize = true;
-            this.opcaoA.Location = new System.Drawing.Point(3, 203);
+            this.opcaoA.Location = new System.Drawing.Point(3, 16);
             this.opcaoA.Name = "opcaoA";
             this.opcaoA.Size = new System.Drawing.Size(66, 19);
             this.opcaoA.TabIndex = 6;
             this.opcaoA.TabStop = true;
+            this.opcaoA.Tag = "A";
             this.opcaoA.Text = "opcaoA";
             this.opcaoA.UseVisualStyleBackColor = true;
+            this.opcaoA.Click += new System.EventHandler(this.optA_Click);
             // 
             // opcaoB
             // 
             this.opcaoB.AutoSize = true;
-            this.opcaoB.Location = new System.Drawing.Point(3, 239);
+            this.opcaoB.Location = new System.Drawing.Point(3, 41);
             this.opcaoB.Name = "opcaoB";
             this.opcaoB.Size = new System.Drawing.Size(65, 19);
             this.opcaoB.TabIndex = 7;
             this.opcaoB.TabStop = true;
+            this.opcaoB.Tag = "B";
             this.opcaoB.Text = "opcaoB";
             this.opcaoB.UseVisualStyleBackColor = true;
+            this.opcaoB.Click += new System.EventHandler(this.optA_Click);
             // 
             // opcaoC
             // 
             this.opcaoC.AutoSize = true;
-            this.opcaoC.Location = new System.Drawing.Point(3, 273);
+            this.opcaoC.Location = new System.Drawing.Point(3, 66);
             this.opcaoC.Name = "opcaoC";
             this.opcaoC.Size = new System.Drawing.Size(66, 19);
             this.opcaoC.TabIndex = 8;
             this.opcaoC.TabStop = true;
+            this.opcaoC.Tag = "C";
             this.opcaoC.Text = "opcaoC";
             this.opcaoC.UseVisualStyleBackColor = true;
+            this.opcaoC.Click += new System.EventHandler(this.optA_Click);
             // 
             // rb_resposta4
             // 
             this.rb_resposta4.AutoSize = true;
-            this.rb_resposta4.Location = new System.Drawing.Point(3, 310);
+            this.rb_resposta4.Location = new System.Drawing.Point(3, 91);
             this.rb_resposta4.Name = "rb_resposta4";
-            this.rb_resposta4.Size = new System.Drawing.Size(79, 19);
+            this.rb_resposta4.Size = new System.Drawing.Size(66, 19);
             this.rb_resposta4.TabIndex = 9;
             this.rb_resposta4.TabStop = true;
-            this.rb_resposta4.Text = "Pergunta4";
+            this.rb_resposta4.Text = "opcaoD";
             this.rb_resposta4.UseVisualStyleBackColor = true;
+            this.rb_resposta4.Click += new System.EventHandler(this.optA_Click);
             // 
             // rb_resposta5
             // 
             this.rb_resposta5.AutoSize = true;
-            this.rb_resposta5.Location = new System.Drawing.Point(3, 347);
+            this.rb_resposta5.Location = new System.Drawing.Point(3, 116);
             this.rb_resposta5.Name = "rb_resposta5";
-            this.rb_resposta5.Size = new System.Drawing.Size(79, 19);
+            this.rb_resposta5.Size = new System.Drawing.Size(64, 19);
             this.rb_resposta5.TabIndex = 10;
             this.rb_resposta5.TabStop = true;
-            this.rb_resposta5.Text = "Pergunta5";
+            this.rb_resposta5.Tag = "E";
+            this.rb_resposta5.Text = "opcaoE";
             this.rb_resposta5.UseVisualStyleBackColor = true;
+            this.rb_resposta5.Click += new System.EventHandler(this.optA_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 71);
+            this.label1.Location = new System.Drawing.Point(9, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(183, 15);
             this.label1.TabIndex = 11;
@@ -118,17 +130,21 @@ namespace Portifolio_CSharp
             // 
             // lb_pergunta
             // 
-            this.lb_pergunta.AutoSize = true;
-            this.lb_pergunta.Location = new System.Drawing.Point(3, 9);
+            this.lb_pergunta.BackColor = System.Drawing.Color.White;
+            this.lb_pergunta.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_pergunta.Location = new System.Drawing.Point(32, 18);
             this.lb_pergunta.Name = "lb_pergunta";
-            this.lb_pergunta.Size = new System.Drawing.Size(38, 15);
+            this.lb_pergunta.Size = new System.Drawing.Size(450, 87);
             this.lb_pergunta.TabIndex = 13;
-            this.lb_pergunta.Text = "label2";
+            this.lb_pergunta.Text = "Lorem ipsum dolor sit amet, sociosqu dictum fames laoreet vel nisi molestie laore" +
+    "et ac volutpat auctor at non euismod Donec ante sapien lobortis faucibus vel ut " +
+    "egestas accumsan";
+            this.lb_pergunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lb_teste
             // 
             this.lb_teste.AutoSize = true;
-            this.lb_teste.Location = new System.Drawing.Point(505, 372);
+            this.lb_teste.Location = new System.Drawing.Point(475, 370);
             this.lb_teste.Name = "lb_teste";
             this.lb_teste.Size = new System.Drawing.Size(38, 15);
             this.lb_teste.TabIndex = 14;
@@ -136,17 +152,29 @@ namespace Portifolio_CSharp
             // 
             // pl_final
             // 
+            this.pl_final.Controls.Add(this.label2);
             this.pl_final.Controls.Add(this.lb_resultado2);
             this.pl_final.Controls.Add(this.lb_resultado);
-            this.pl_final.Location = new System.Drawing.Point(396, 41);
+            this.pl_final.Location = new System.Drawing.Point(3, 3);
             this.pl_final.Name = "pl_final";
-            this.pl_final.Size = new System.Drawing.Size(200, 100);
+            this.pl_final.Size = new System.Drawing.Size(537, 452);
             this.pl_final.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(100, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(341, 37);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Parabéns por completar !";
             // 
             // lb_resultado2
             // 
             this.lb_resultado2.AutoSize = true;
-            this.lb_resultado2.Location = new System.Drawing.Point(31, 55);
+            this.lb_resultado2.Location = new System.Drawing.Point(135, 289);
             this.lb_resultado2.Name = "lb_resultado2";
             this.lb_resultado2.Size = new System.Drawing.Size(38, 15);
             this.lb_resultado2.TabIndex = 1;
@@ -155,7 +183,7 @@ namespace Portifolio_CSharp
             // lb_resultado
             // 
             this.lb_resultado.AutoSize = true;
-            this.lb_resultado.Location = new System.Drawing.Point(31, 17);
+            this.lb_resultado.Location = new System.Drawing.Point(135, 251);
             this.lb_resultado.Name = "lb_resultado";
             this.lb_resultado.Size = new System.Drawing.Size(38, 15);
             this.lb_resultado.TabIndex = 0;
@@ -164,20 +192,31 @@ namespace Portifolio_CSharp
             // pnl_perguntas
             // 
             this.pnl_perguntas.Controls.Add(this.lb_pergunta);
+            this.pnl_perguntas.Controls.Add(this.panel1);
             this.pnl_perguntas.Controls.Add(this.label1);
-            this.pnl_perguntas.Controls.Add(this.opcaoA);
-            this.pnl_perguntas.Controls.Add(this.opcaoB);
-            this.pnl_perguntas.Controls.Add(this.opcaoC);
-            this.pnl_perguntas.Controls.Add(this.rb_resposta5);
-            this.pnl_perguntas.Controls.Add(this.rb_resposta4);
-            this.pnl_perguntas.Location = new System.Drawing.Point(12, 14);
+            this.pnl_perguntas.Controls.Add(this.PicProximo);
+            this.pnl_perguntas.Controls.Add(this.lb_teste);
+            this.pnl_perguntas.Location = new System.Drawing.Point(12, 12);
             this.pnl_perguntas.Name = "pnl_perguntas";
-            this.pnl_perguntas.Size = new System.Drawing.Size(378, 405);
+            this.pnl_perguntas.Size = new System.Drawing.Size(519, 433);
             this.pnl_perguntas.TabIndex = 18;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.opcaoA);
+            this.panel1.Controls.Add(this.rb_resposta4);
+            this.panel1.Controls.Add(this.rb_resposta5);
+            this.panel1.Controls.Add(this.opcaoC);
+            this.panel1.Controls.Add(this.opcaoB);
+            this.panel1.Location = new System.Drawing.Point(9, 167);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(378, 154);
+            this.panel1.TabIndex = 14;
             // 
             // PicProximo
             // 
-            this.PicProximo.Location = new System.Drawing.Point(505, 403);
+            this.PicProximo.Location = new System.Drawing.Point(460, 391);
             this.PicProximo.Name = "PicProximo";
             this.PicProximo.Size = new System.Drawing.Size(37, 32);
             this.PicProximo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -213,13 +252,11 @@ namespace Portifolio_CSharp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 451);
+            this.ClientSize = new System.Drawing.Size(544, 459);
             this.Controls.Add(this.PicDisabled);
-            this.Controls.Add(this.pl_final);
             this.Controls.Add(this.picEnabled);
-            this.Controls.Add(this.PicProximo);
+            this.Controls.Add(this.pl_final);
             this.Controls.Add(this.pnl_perguntas);
-            this.Controls.Add(this.lb_teste);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "F_Quiz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -230,6 +267,8 @@ namespace Portifolio_CSharp
             this.pl_final.PerformLayout();
             this.pnl_perguntas.ResumeLayout(false);
             this.pnl_perguntas.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicProximo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnabled)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicDisabled)).EndInit();
@@ -254,5 +293,7 @@ namespace Portifolio_CSharp
         private System.Windows.Forms.PictureBox PicProximo;
         private System.Windows.Forms.PictureBox picEnabled;
         private System.Windows.Forms.PictureBox PicDisabled;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }

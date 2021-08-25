@@ -219,6 +219,5 @@ namespace Portifolio_CSharp
             PicProximo.Image = picEnabled.Image;
             SelecionarResposta(rb);
         }
-
     }
 }
