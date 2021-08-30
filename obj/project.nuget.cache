@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "H9uuxjytJt2OE0grcwajJeDjtDu0QxxnVbKUqTGkfM5iKyPaeq+Q1ksuvlrPdT09rYEG+S9SPj1qYAahP+GU7w==",
+  "dgSpecHash": "mY2+NYZfOB+foOVHJv/6OS0o2JZlKwSPV0rodV9Wzf0eEEd+xEJ6ViPp7kQVIUUz+64xwsnWVveNmYgl9gj/9g==",
   "success": true,
   "projectFilePath": "C:\\Users\\tuanz\\Documents\\Flutter Projects\\portifolio_csharp\\Portifolio_CSharp.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\tuanz\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\tuanz\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\tuanz\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\tuanz\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\tuanz\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\tuanz\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\tuanz\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

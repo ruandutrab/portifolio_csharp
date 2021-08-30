@@ -13,7 +13,7 @@ namespace Portifolio_CSharp
         private static SQLiteConnection conexao;
         private static  SQLiteConnection ConexaoBanco()
         {
-            conexao = new SQLiteConnection(@"Data Source="+ Globais.diretorioDb + Globais.NomeDataBase);
+            conexao = new SQLiteConnection(@"Data Source="+ Extender.diretorioDb + Extender.NomeDataBase);
             conexao.Open();
             return conexao;
         }
