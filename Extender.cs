@@ -62,7 +62,7 @@ namespace Portifolio_CSharp
                     if (File.Exists(fileQuizPath))
                     {
                         string textQuiz = JsonConvert.SerializeObject(perguntas);
-                        File.AppendAllText(fileQuizPath, textQuiz);
+                        File.WriteAllText(fileQuizPath, textQuiz);
                     }
                     else
                     {

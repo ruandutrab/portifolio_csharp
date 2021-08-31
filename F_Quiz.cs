@@ -18,6 +18,7 @@ namespace Portifolio_CSharp
         List<Pergunta> quiz = new List<Pergunta>();
         int pontos = 0;
         int indexQuestao = 0;
+        int qtdeDados;
         public F_Quiz(Form fromPrincipal)
         {
             InitializeComponent();
@@ -38,7 +39,13 @@ namespace Portifolio_CSharp
                  pnl_adicionarQuestoes.Visible = true;
                  return;
             }
-           
+
+            dadosQuestao(); //Recarrega as informações com questões e respostas.
+            qtdeDados = quiz.Count;
+            qtdeDados -= 1;
+        }
+        private void dadosQuestao() // Metodo para gerar novas perguntas.
+        {
             List<Pergunta> dadosQuiz = Extender.LeituraDasPerguntas();
             quiz = dadosQuiz;
             lb_questao.Text = dadosQuiz[indexQuestao].questao;
@@ -46,7 +53,6 @@ namespace Portifolio_CSharp
             rb_resposta2.Text = dadosQuiz[indexQuestao].pergunta2;
             rb_resposta3.Text = dadosQuiz[indexQuestao].pergunta3;
             rb_resposta4.Text = dadosQuiz[indexQuestao].pergunta4;
-            
         }
 
         private void F_Quiz_FormClosed(object sender, FormClosedEventArgs e)
@@ -60,9 +66,10 @@ namespace Portifolio_CSharp
             var addQuestion = MessageBox.Show("Deseja adicionar novas Questões?", "Adicionar Questões", MessageBoxButtons.YesNo);
             if (addQuestion == DialogResult.Yes)
             {
-                pnl_perguntas.Visible = false;
+                pnl_finalQuiz.Visible = false;
                 pnl_adicionarQuestoes.Visible = true;
             }
+            quiz.Clear();
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
@@ -71,7 +78,6 @@ namespace Portifolio_CSharp
                 MessageBox.Show("Selecione uma resposta certa.");
                 return;
             }
-            quiz.Clear();
             quiz.Add(new Pergunta() {
             questao = tb_questao.Text,
             pergunta1 = tb_resposta1.Text,
@@ -93,37 +99,29 @@ namespace Portifolio_CSharp
         private void btn_sair_Click(object sender, EventArgs e)
         {
             pnl_adicionarQuestoes.Visible = false;
-            pnl_perguntas.Visible = true;
+            pnl_finalQuiz.Visible = true;
         }
 
-        private void btn_resposta1_Certa_Click(object sender, EventArgs e)
-        {
-            tb_respostaCerta.Text = tb_resposta1.Text;
-        }
+        private void btn_resposta1_Certa_Click(object sender, EventArgs e) => tb_respostaCerta.Text = tb_resposta1.Text;
 
-        private void btn_resposta2_Certa_Click(object sender, EventArgs e)
-        {
-            tb_respostaCerta.Text = tb_resposta2.Text;
-        }
+        private void btn_resposta2_Certa_Click(object sender, EventArgs e) => tb_respostaCerta.Text = tb_resposta2.Text;
 
-        private void btn_resposta3_Certa_Click(object sender, EventArgs e)
-        {
-            tb_respostaCerta.Text = tb_resposta3.Text;
-        }
+        private void btn_resposta3_Certa_Click(object sender, EventArgs e) => tb_respostaCerta.Text = tb_resposta3.Text;
 
-        private void btn_resposta4_Certa_Click(object sender, EventArgs e)
-        {
-            tb_respostaCerta.Text = tb_resposta4.Text;
-        }
+        private void btn_resposta4_Certa_Click(object sender, EventArgs e) => tb_respostaCerta.Text = tb_resposta4.Text;
 
         private void btn_proximaQuestao_Click(object sender, EventArgs e)
         {
             btn_addQuestao.Visible = false;
             CalcularResposta();
-            if(indexQuestao == quiz.Count)
+            if(indexQuestao >= qtdeDados)
             {
                 MessageBox.Show("Acabou");
+                pnl_perguntas.Visible = false;
+                return;
             }
+            indexQuestao++;
+            dadosQuestao();
         }
         private void CalcularResposta()
         {
@@ -148,9 +146,7 @@ namespace Portifolio_CSharp
                 MessageBox.Show("Certa!");
                 pontos += 1;
             }
-            indexQuestao++;
             lb_pontos.Text = pontos.ToString();
         }
-
     }
 }
