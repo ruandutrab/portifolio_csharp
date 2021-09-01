@@ -141,10 +141,10 @@ namespace Portifolio_CSharp
         private System.Windows.Forms.Button btn_jogoVelha;
         private System.Windows.Forms.Button bnt_forca;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cb_niveis;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_jogador;
+        public System.Windows.Forms.ComboBox cb_niveis;
     }
 }
 

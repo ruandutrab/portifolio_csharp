@@ -12,7 +12,7 @@ namespace Portifolio_CSharp
 {
     public partial class F_telaPrincipal : Form
     {
-
+        public string nivel;
         public F_telaPrincipal()
         {
             InitializeComponent();
@@ -20,9 +20,10 @@ namespace Portifolio_CSharp
 
         private void btn_quiz_Click(object sender, EventArgs e)
         {
+            
             if(!string.IsNullOrEmpty(tb_jogador.Text))
             {
-                new F_Quiz(this).Visible = true;
+                new F_Quiz(this, this).Visible = true;
                 Visible = false;
             }
             else
@@ -40,6 +41,7 @@ namespace Portifolio_CSharp
             cb_niveis.DataSource = new BindingSource(niveisCb, null);
             cb_niveis.DisplayMember = "Value";
             cb_niveis.ValueMember = "Key";
+            
 
         }
     }

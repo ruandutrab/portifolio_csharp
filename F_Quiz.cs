@@ -15,19 +15,28 @@ namespace Portifolio_CSharp
     public partial class F_Quiz : Form
     {
         Form principal;
+        F_telaPrincipal f_principal;
         List<Pergunta> quiz = new List<Pergunta>();
         int pontos = 0;
         int indexQuestao = 0;
         int qtdeDados;
-        public F_Quiz(Form fromPrincipal)
+        string nivel;
+        public F_Quiz(Form fromPrincipal, F_telaPrincipal t_p)
         {
             InitializeComponent();
             principal = fromPrincipal;
+            f_principal = t_p;
 
         }
 
         private void F_Quiz_Load(object sender, EventArgs e)
-        {            
+        {
+            nivel = f_principal.cb_niveis.SelectedValue.ToString();
+            if(nivel == "facil")
+            {
+                rb_resposta3.Visible = false;
+                rb_resposta4.Visible = false;
+            }
             if (!File.Exists(Extender.fileQuizPath))
             {
                 Extender.EscrevePerguntas(quiz);
@@ -46,6 +55,7 @@ namespace Portifolio_CSharp
         }
         private void dadosQuestao() // Metodo para gerar novas perguntas.
         {
+            
             List<Pergunta> dadosQuiz = Extender.LeituraDasPerguntas();
             quiz = dadosQuiz;
             lb_questao.Text = dadosQuiz[indexQuestao].questao;
@@ -53,6 +63,21 @@ namespace Portifolio_CSharp
             rb_resposta2.Text = dadosQuiz[indexQuestao].pergunta2;
             rb_resposta3.Text = dadosQuiz[indexQuestao].pergunta3;
             rb_resposta4.Text = dadosQuiz[indexQuestao].pergunta4;
+            if (rb_resposta3.Visible == false && dadosQuiz[indexQuestao].respostaCerta == rb_resposta3.Text)
+            {
+                int n = 0;
+                Random nd = new Random();
+                n = nd.Next(1, 3);
+                if(n == 1)
+                {
+                    rb_resposta1.Text = dadosQuiz[indexQuestao].respostaCerta;
+                }
+                else
+                {
+                    rb_resposta2.Text = dadosQuiz[indexQuestao].respostaCerta;
+                }
+            }
+
         }
 
         private void F_Quiz_FormClosed(object sender, FormClosedEventArgs e)
