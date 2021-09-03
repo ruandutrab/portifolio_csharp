@@ -26,7 +26,6 @@ namespace Portifolio_CSharp
             InitializeComponent();
             principal = fromPrincipal;
             f_principal = t_p;
-
         }
 
         private void F_Quiz_Load(object sender, EventArgs e)
@@ -35,6 +34,10 @@ namespace Portifolio_CSharp
             if(nivel == "facil")
             {
                 rb_resposta3.Visible = false;
+                rb_resposta4.Visible = false;
+            } 
+            else if(nivel == "medio")
+            {
                 rb_resposta4.Visible = false;
             }
             if (!File.Exists(Extender.fileQuizPath))
@@ -55,7 +58,8 @@ namespace Portifolio_CSharp
         }
         private void dadosQuestao() // Metodo para gerar novas perguntas.
         {
-            
+            BotoesAux();
+
             List<Pergunta> dadosQuiz = Extender.LeituraDasPerguntas();
             quiz = dadosQuiz;
             lb_questao.Text = dadosQuiz[indexQuestao].questao;
@@ -63,11 +67,11 @@ namespace Portifolio_CSharp
             rb_resposta2.Text = dadosQuiz[indexQuestao].pergunta2;
             rb_resposta3.Text = dadosQuiz[indexQuestao].pergunta3;
             rb_resposta4.Text = dadosQuiz[indexQuestao].pergunta4;
+            int n = 0;
+            Random nd = new Random();
+            n = nd.Next(1, 3);
             if (rb_resposta3.Visible == false && dadosQuiz[indexQuestao].respostaCerta == rb_resposta3.Text)
             {
-                int n = 0;
-                Random nd = new Random();
-                n = nd.Next(1, 3);
                 if(n == 1)
                 {
                     rb_resposta1.Text = dadosQuiz[indexQuestao].respostaCerta;
@@ -77,7 +81,31 @@ namespace Portifolio_CSharp
                     rb_resposta2.Text = dadosQuiz[indexQuestao].respostaCerta;
                 }
             }
+            else if (rb_resposta4.Visible == false && dadosQuiz[indexQuestao].respostaCerta == rb_resposta4.Text)
+            {
+                if (n == 1)
+                {
+                    rb_resposta1.Text = dadosQuiz[indexQuestao].respostaCerta;
+                }
+                else
+                {
+                    rb_resposta2.Text = dadosQuiz[indexQuestao].respostaCerta;
+                }
+            }
+        }
 
+        private void BotoesAux()
+        {
+            if (pontos < 5)
+            {
+                btn_pular.Enabled = false;
+                btn_elimitarResposta.Enabled = false;
+            } 
+            else
+            {
+                btn_pular.Enabled = true;
+                btn_elimitarResposta.Enabled = true;
+            }
         }
 
         private void F_Quiz_FormClosed(object sender, FormClosedEventArgs e)
@@ -94,7 +122,7 @@ namespace Portifolio_CSharp
                 pnl_finalQuiz.Visible = false;
                 pnl_adicionarQuestoes.Visible = true;
             }
-            quiz.Clear();
+  
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
@@ -103,13 +131,19 @@ namespace Portifolio_CSharp
                 MessageBox.Show("Selecione uma resposta certa.");
                 return;
             }
+            if (string.IsNullOrEmpty(tb_dicaResposta.Text))
+            {
+                MessageBox.Show("Escreva uma dica para essa questão.");
+                return;
+            }
             quiz.Add(new Pergunta() {
             questao = tb_questao.Text,
             pergunta1 = tb_resposta1.Text,
             pergunta2 = tb_resposta2.Text,
             pergunta3 = tb_resposta3.Text,
             pergunta4 = tb_resposta4.Text,
-            respostaCerta = tb_respostaCerta.Text
+            respostaCerta = tb_respostaCerta.Text,
+            dicaResposta = tb_dicaResposta.Text
             });
             Extender.EscrevePerguntas(quiz);
             tb_questao.Clear();
@@ -118,6 +152,7 @@ namespace Portifolio_CSharp
             tb_resposta3.Clear();
             tb_resposta4.Clear();
             tb_respostaCerta.Clear();
+            tb_dicaResposta.Clear();
             tb_questao.Focus();
         }
 
@@ -125,6 +160,7 @@ namespace Portifolio_CSharp
         {
             pnl_adicionarQuestoes.Visible = false;
             pnl_finalQuiz.Visible = true;
+            dadosQuestao();
         }
 
         private void btn_resposta1_Certa_Click(object sender, EventArgs e) => tb_respostaCerta.Text = tb_resposta1.Text;
@@ -147,6 +183,10 @@ namespace Portifolio_CSharp
             }
             indexQuestao++;
             dadosQuestao();
+            rb_resposta1.Enabled = true;
+            rb_resposta2.Enabled = true;
+            rb_resposta3.Enabled = true;
+            rb_resposta4.Enabled = true;
         }
         private void CalcularResposta()
         {
@@ -154,24 +194,108 @@ namespace Portifolio_CSharp
             if(rb_resposta1.Text == certaResposta && rb_resposta1.Checked == true)
             {
                 MessageBox.Show("Certa!");
-                pontos += 1;
+                pontos += 6;
             } 
             else if (rb_resposta2.Text == certaResposta && rb_resposta2.Checked == true)
             {
                 MessageBox.Show("Certa!");
-                pontos += 1;
+                pontos += 6;
             }
             else if (rb_resposta3.Text == certaResposta && rb_resposta3.Checked == true)
             {
                 MessageBox.Show("Certa!");
-                pontos += 1;
+                pontos += 6;
             }
             else if (rb_resposta4.Text == certaResposta && rb_resposta4.Checked == true)
             {
                 MessageBox.Show("Certa!");
-                pontos += 1;
+                pontos += 6;
             }
             lb_pontos.Text = pontos.ToString();
+        }
+
+        private void btn_finalReiniciar_Click(object sender, EventArgs e)
+        {
+            indexQuestao = 0;
+            pontos = 0;
+            pnl_perguntas.Visible = true;
+            dadosQuestao();
+
+        }
+
+        private void btn_finalSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_finalizar_Click(object sender, EventArgs e)
+        {
+            // Botão de finalizar!
+        }
+
+        private void btn_pular_Click(object sender, EventArgs e)
+        {
+            //pular questões.
+        }
+
+        private void btn_elimitarResposta_Click(object sender, EventArgs e)
+        {//Eliminar duas resposta.
+            Random n_random = new Random();
+            int question1;
+            int question2;
+            question1 =  n_random.Next(1, 3);
+            question2 = n_random.Next(3, 5);
+            pontos -= 5;
+            if(question1 == 1)
+            {
+                if(rb_resposta1.Text == quiz[indexQuestao].respostaCerta)
+                {
+                    rb_resposta2.Enabled = false;
+                } 
+                else
+                {
+                    rb_resposta1.Enabled = false;
+                }
+            }
+            else if(question1 == 2)
+            {
+                if(rb_resposta2.Text == quiz[indexQuestao].respostaCerta)
+                {
+                    rb_resposta1.Enabled = false;
+                }
+                else
+                {
+                    rb_resposta2.Enabled = false;
+                }
+            }
+            if(question2 == 3)
+            {
+                if(rb_resposta3.Text == quiz[indexQuestao].respostaCerta)
+                {
+                    rb_resposta4.Enabled = false;
+                }
+                else
+                {
+                    rb_resposta3.Enabled = false;
+                }
+            }
+            else if (question2 == 4)
+            {
+                if(rb_resposta4.Text == quiz[indexQuestao].respostaCerta)
+                {
+                    rb_resposta3.Enabled = false;
+                }
+                else
+                {
+                    rb_resposta4.Enabled = false;
+                }
+            }
+        }
+
+        private void btn_dicaResposta_Click(object sender, EventArgs e)
+        {
+            // Dica de resposta.
+            MessageBox.Show(quiz[indexQuestao].dicaResposta);
         }
     }
 }

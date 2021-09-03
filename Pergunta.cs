@@ -8,5 +8,6 @@
         public string pergunta3 { get; set; }
         public string pergunta4 { get; set; }
         public string respostaCerta { get; set; }
+        public string dicaResposta { get; set; }
     }
 }

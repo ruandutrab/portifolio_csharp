@@ -31,22 +31,7 @@ namespace Portifolio_CSharp
         {
             this.pnl_finalQuiz = new System.Windows.Forms.Panel();
             this.pnl_perguntas = new System.Windows.Forms.Panel();
-            this.lb_questao = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rb_resposta1 = new System.Windows.Forms.RadioButton();
-            this.rb_resposta4 = new System.Windows.Forms.RadioButton();
-            this.rb_resposta3 = new System.Windows.Forms.RadioButton();
-            this.rb_resposta2 = new System.Windows.Forms.RadioButton();
-            this.btn_finalizar = new System.Windows.Forms.Button();
-            this.btn_pular = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_addQuestao = new System.Windows.Forms.Button();
-            this.btn_proximaQuestao = new System.Windows.Forms.Button();
-            this.btn_finalSair = new System.Windows.Forms.Button();
-            this.btn_finalReiniciar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lb_pontos = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.btn_dicaResposta = new System.Windows.Forms.Button();
             this.pnl_adicionarQuestoes = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.tb_respostaCerta = new System.Windows.Forms.TextBox();
@@ -66,10 +51,29 @@ namespace Portifolio_CSharp
             this.label3 = new System.Windows.Forms.Label();
             this.tb_questao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_elimitarResposta = new System.Windows.Forms.Button();
+            this.lb_questao = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rb_resposta1 = new System.Windows.Forms.RadioButton();
+            this.rb_resposta4 = new System.Windows.Forms.RadioButton();
+            this.rb_resposta3 = new System.Windows.Forms.RadioButton();
+            this.rb_resposta2 = new System.Windows.Forms.RadioButton();
+            this.btn_finalizar = new System.Windows.Forms.Button();
+            this.btn_pular = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_addQuestao = new System.Windows.Forms.Button();
+            this.btn_proximaQuestao = new System.Windows.Forms.Button();
+            this.btn_finalSair = new System.Windows.Forms.Button();
+            this.btn_finalReiniciar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lb_pontos = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tb_dicaResposta = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnl_finalQuiz.SuspendLayout();
             this.pnl_perguntas.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.pnl_adicionarQuestoes.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_finalQuiz
@@ -89,6 +93,8 @@ namespace Portifolio_CSharp
             // pnl_perguntas
             // 
             this.pnl_perguntas.BackColor = System.Drawing.SystemColors.Control;
+            this.pnl_perguntas.Controls.Add(this.btn_dicaResposta);
+            this.pnl_perguntas.Controls.Add(this.btn_elimitarResposta);
             this.pnl_perguntas.Controls.Add(this.lb_questao);
             this.pnl_perguntas.Controls.Add(this.panel1);
             this.pnl_perguntas.Controls.Add(this.btn_finalizar);
@@ -96,183 +102,26 @@ namespace Portifolio_CSharp
             this.pnl_perguntas.Controls.Add(this.label1);
             this.pnl_perguntas.Controls.Add(this.btn_addQuestao);
             this.pnl_perguntas.Controls.Add(this.btn_proximaQuestao);
-            this.pnl_perguntas.Location = new System.Drawing.Point(25, 16);
+            this.pnl_perguntas.Location = new System.Drawing.Point(7, 9);
             this.pnl_perguntas.Name = "pnl_perguntas";
-            this.pnl_perguntas.Size = new System.Drawing.Size(484, 422);
+            this.pnl_perguntas.Size = new System.Drawing.Size(515, 427);
             this.pnl_perguntas.TabIndex = 17;
             // 
-            // lb_questao
+            // btn_dicaResposta
             // 
-            this.lb_questao.BackColor = System.Drawing.Color.LightGray;
-            this.lb_questao.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_questao.Location = new System.Drawing.Point(15, 34);
-            this.lb_questao.Name = "lb_questao";
-            this.lb_questao.Size = new System.Drawing.Size(450, 87);
-            this.lb_questao.TabIndex = 0;
-            this.lb_questao.Text = "Lorem ipsum dolor sit amet, sociosqu dictum fames laoreet vel nisi molestie laore" +
-    "et ac volutpat auctor at non euismod Donec ante sapien lobortis faucibus vel ut " +
-    "egestas accumsan";
-            this.lb_questao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.rb_resposta1);
-            this.panel1.Controls.Add(this.rb_resposta4);
-            this.panel1.Controls.Add(this.rb_resposta3);
-            this.panel1.Controls.Add(this.rb_resposta2);
-            this.panel1.Location = new System.Drawing.Point(14, 171);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(397, 149);
-            this.panel1.TabIndex = 0;
-            // 
-            // rb_resposta1
-            // 
-            this.rb_resposta1.AutoSize = true;
-            this.rb_resposta1.Location = new System.Drawing.Point(3, 3);
-            this.rb_resposta1.Name = "rb_resposta1";
-            this.rb_resposta1.Size = new System.Drawing.Size(88, 19);
-            this.rb_resposta1.TabIndex = 6;
-            this.rb_resposta1.TabStop = true;
-            this.rb_resposta1.Tag = "1";
-            this.rb_resposta1.Text = "Resposta1";
-            this.rb_resposta1.UseVisualStyleBackColor = true;
-            // 
-            // rb_resposta4
-            // 
-            this.rb_resposta4.AutoSize = true;
-            this.rb_resposta4.Location = new System.Drawing.Point(3, 116);
-            this.rb_resposta4.Name = "rb_resposta4";
-            this.rb_resposta4.Size = new System.Drawing.Size(88, 19);
-            this.rb_resposta4.TabIndex = 9;
-            this.rb_resposta4.TabStop = true;
-            this.rb_resposta4.Tag = "4";
-            this.rb_resposta4.Text = "Resposta4";
-            this.rb_resposta4.UseVisualStyleBackColor = true;
-            // 
-            // rb_resposta3
-            // 
-            this.rb_resposta3.AutoSize = true;
-            this.rb_resposta3.Location = new System.Drawing.Point(3, 76);
-            this.rb_resposta3.Name = "rb_resposta3";
-            this.rb_resposta3.Size = new System.Drawing.Size(88, 19);
-            this.rb_resposta3.TabIndex = 8;
-            this.rb_resposta3.TabStop = true;
-            this.rb_resposta3.Tag = "3";
-            this.rb_resposta3.Text = "Resposta3";
-            this.rb_resposta3.UseVisualStyleBackColor = true;
-            // 
-            // rb_resposta2
-            // 
-            this.rb_resposta2.AutoSize = true;
-            this.rb_resposta2.Location = new System.Drawing.Point(3, 41);
-            this.rb_resposta2.Name = "rb_resposta2";
-            this.rb_resposta2.Size = new System.Drawing.Size(88, 19);
-            this.rb_resposta2.TabIndex = 7;
-            this.rb_resposta2.TabStop = true;
-            this.rb_resposta2.Tag = "2";
-            this.rb_resposta2.Text = "Resposta2";
-            this.rb_resposta2.UseVisualStyleBackColor = true;
-            // 
-            // btn_finalizar
-            // 
-            this.btn_finalizar.Location = new System.Drawing.Point(7, 396);
-            this.btn_finalizar.Name = "btn_finalizar";
-            this.btn_finalizar.Size = new System.Drawing.Size(75, 23);
-            this.btn_finalizar.TabIndex = 0;
-            this.btn_finalizar.Text = "Finalizar";
-            this.btn_finalizar.UseVisualStyleBackColor = true;
-            // 
-            // btn_pular
-            // 
-            this.btn_pular.Location = new System.Drawing.Point(102, 396);
-            this.btn_pular.Name = "btn_pular";
-            this.btn_pular.Size = new System.Drawing.Size(75, 23);
-            this.btn_pular.TabIndex = 0;
-            this.btn_pular.Text = "Pular";
-            this.btn_pular.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(17, 153);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 15);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Escolha a resposta correta abaixo.";
-            // 
-            // btn_addQuestao
-            // 
-            this.btn_addQuestao.Location = new System.Drawing.Point(388, 396);
-            this.btn_addQuestao.Name = "btn_addQuestao";
-            this.btn_addQuestao.Size = new System.Drawing.Size(93, 23);
-            this.btn_addQuestao.TabIndex = 0;
-            this.btn_addQuestao.Text = "Add Questões";
-            this.btn_addQuestao.UseVisualStyleBackColor = true;
-            this.btn_addQuestao.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_proximaQuestao
-            // 
-            this.btn_proximaQuestao.Location = new System.Drawing.Point(198, 396);
-            this.btn_proximaQuestao.Name = "btn_proximaQuestao";
-            this.btn_proximaQuestao.Size = new System.Drawing.Size(75, 23);
-            this.btn_proximaQuestao.TabIndex = 0;
-            this.btn_proximaQuestao.Text = "Próximo";
-            this.btn_proximaQuestao.UseVisualStyleBackColor = true;
-            this.btn_proximaQuestao.Click += new System.EventHandler(this.btn_proximaQuestao_Click);
-            // 
-            // btn_finalSair
-            // 
-            this.btn_finalSair.Location = new System.Drawing.Point(301, 260);
-            this.btn_finalSair.Name = "btn_finalSair";
-            this.btn_finalSair.Size = new System.Drawing.Size(75, 23);
-            this.btn_finalSair.TabIndex = 20;
-            this.btn_finalSair.Text = "Sair";
-            this.btn_finalSair.UseVisualStyleBackColor = true;
-            // 
-            // btn_finalReiniciar
-            // 
-            this.btn_finalReiniciar.Location = new System.Drawing.Point(143, 260);
-            this.btn_finalReiniciar.Name = "btn_finalReiniciar";
-            this.btn_finalReiniciar.Size = new System.Drawing.Size(75, 23);
-            this.btn_finalReiniciar.TabIndex = 19;
-            this.btn_finalReiniciar.Text = "Reiniciar";
-            this.btn_finalReiniciar.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(172, 115);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(199, 43);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Parabéns!";
-            // 
-            // lb_pontos
-            // 
-            this.lb_pontos.AutoSize = true;
-            this.lb_pontos.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_pontos.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lb_pontos.Location = new System.Drawing.Point(320, 186);
-            this.lb_pontos.Name = "lb_pontos";
-            this.lb_pontos.Size = new System.Drawing.Size(22, 24);
-            this.lb_pontos.TabIndex = 0;
-            this.lb_pontos.Text = "0";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(179, 187);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 19);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Sua pontuação:";
+            this.btn_dicaResposta.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_dicaResposta.Location = new System.Drawing.Point(314, 181);
+            this.btn_dicaResposta.Name = "btn_dicaResposta";
+            this.btn_dicaResposta.Size = new System.Drawing.Size(202, 23);
+            this.btn_dicaResposta.TabIndex = 17;
+            this.btn_dicaResposta.Text = "Dica de resposta - 5 pontos";
+            this.btn_dicaResposta.UseVisualStyleBackColor = true;
+            this.btn_dicaResposta.Click += new System.EventHandler(this.btn_dicaResposta_Click);
             // 
             // pnl_adicionarQuestoes
             // 
+            this.pnl_adicionarQuestoes.Controls.Add(this.tb_dicaResposta);
+            this.pnl_adicionarQuestoes.Controls.Add(this.label10);
             this.pnl_adicionarQuestoes.Controls.Add(this.label7);
             this.pnl_adicionarQuestoes.Controls.Add(this.tb_respostaCerta);
             this.pnl_adicionarQuestoes.Controls.Add(this.btn_resposta4_Certa);
@@ -291,7 +140,7 @@ namespace Portifolio_CSharp
             this.pnl_adicionarQuestoes.Controls.Add(this.label3);
             this.pnl_adicionarQuestoes.Controls.Add(this.tb_questao);
             this.pnl_adicionarQuestoes.Controls.Add(this.label2);
-            this.pnl_adicionarQuestoes.Location = new System.Drawing.Point(2, 3);
+            this.pnl_adicionarQuestoes.Location = new System.Drawing.Point(2, 0);
             this.pnl_adicionarQuestoes.Name = "pnl_adicionarQuestoes";
             this.pnl_adicionarQuestoes.Size = new System.Drawing.Size(538, 456);
             this.pnl_adicionarQuestoes.TabIndex = 16;
@@ -454,11 +303,214 @@ namespace Portifolio_CSharp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 6);
+            this.label2.Location = new System.Drawing.Point(7, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Adicionar Questões";
+            // 
+            // btn_elimitarResposta
+            // 
+            this.btn_elimitarResposta.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_elimitarResposta.Location = new System.Drawing.Point(314, 152);
+            this.btn_elimitarResposta.Name = "btn_elimitarResposta";
+            this.btn_elimitarResposta.Size = new System.Drawing.Size(202, 23);
+            this.btn_elimitarResposta.TabIndex = 12;
+            this.btn_elimitarResposta.Text = "Eliminar 2 Respostas - 5 pontos";
+            this.btn_elimitarResposta.UseVisualStyleBackColor = true;
+            this.btn_elimitarResposta.Click += new System.EventHandler(this.btn_elimitarResposta_Click);
+            // 
+            // lb_questao
+            // 
+            this.lb_questao.BackColor = System.Drawing.Color.LightGray;
+            this.lb_questao.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_questao.Location = new System.Drawing.Point(15, 34);
+            this.lb_questao.Name = "lb_questao";
+            this.lb_questao.Size = new System.Drawing.Size(450, 87);
+            this.lb_questao.TabIndex = 0;
+            this.lb_questao.Text = "Lorem ipsum dolor sit amet, sociosqu dictum fames laoreet vel nisi molestie laore" +
+    "et ac volutpat auctor at non euismod Donec ante sapien lobortis faucibus vel ut " +
+    "egestas accumsan";
+            this.lb_questao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.rb_resposta1);
+            this.panel1.Controls.Add(this.rb_resposta4);
+            this.panel1.Controls.Add(this.rb_resposta3);
+            this.panel1.Controls.Add(this.rb_resposta2);
+            this.panel1.Location = new System.Drawing.Point(14, 152);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(293, 225);
+            this.panel1.TabIndex = 0;
+            // 
+            // rb_resposta1
+            // 
+            this.rb_resposta1.AutoSize = true;
+            this.rb_resposta1.Location = new System.Drawing.Point(3, 3);
+            this.rb_resposta1.Name = "rb_resposta1";
+            this.rb_resposta1.Size = new System.Drawing.Size(88, 19);
+            this.rb_resposta1.TabIndex = 6;
+            this.rb_resposta1.TabStop = true;
+            this.rb_resposta1.Tag = "1";
+            this.rb_resposta1.Text = "Resposta1";
+            this.rb_resposta1.UseVisualStyleBackColor = true;
+            // 
+            // rb_resposta4
+            // 
+            this.rb_resposta4.AutoSize = true;
+            this.rb_resposta4.Location = new System.Drawing.Point(3, 163);
+            this.rb_resposta4.Name = "rb_resposta4";
+            this.rb_resposta4.Size = new System.Drawing.Size(88, 19);
+            this.rb_resposta4.TabIndex = 9;
+            this.rb_resposta4.TabStop = true;
+            this.rb_resposta4.Tag = "4";
+            this.rb_resposta4.Text = "Resposta4";
+            this.rb_resposta4.UseVisualStyleBackColor = true;
+            // 
+            // rb_resposta3
+            // 
+            this.rb_resposta3.AutoSize = true;
+            this.rb_resposta3.Location = new System.Drawing.Point(3, 106);
+            this.rb_resposta3.Name = "rb_resposta3";
+            this.rb_resposta3.Size = new System.Drawing.Size(88, 19);
+            this.rb_resposta3.TabIndex = 8;
+            this.rb_resposta3.TabStop = true;
+            this.rb_resposta3.Tag = "3";
+            this.rb_resposta3.Text = "Resposta3";
+            this.rb_resposta3.UseVisualStyleBackColor = true;
+            // 
+            // rb_resposta2
+            // 
+            this.rb_resposta2.AutoSize = true;
+            this.rb_resposta2.Location = new System.Drawing.Point(3, 52);
+            this.rb_resposta2.Name = "rb_resposta2";
+            this.rb_resposta2.Size = new System.Drawing.Size(88, 19);
+            this.rb_resposta2.TabIndex = 7;
+            this.rb_resposta2.TabStop = true;
+            this.rb_resposta2.Tag = "2";
+            this.rb_resposta2.Text = "Resposta2";
+            this.rb_resposta2.UseVisualStyleBackColor = true;
+            // 
+            // btn_finalizar
+            // 
+            this.btn_finalizar.Location = new System.Drawing.Point(314, 239);
+            this.btn_finalizar.Name = "btn_finalizar";
+            this.btn_finalizar.Size = new System.Drawing.Size(202, 23);
+            this.btn_finalizar.TabIndex = 0;
+            this.btn_finalizar.Text = "Desistir";
+            this.btn_finalizar.UseVisualStyleBackColor = true;
+            this.btn_finalizar.Click += new System.EventHandler(this.btn_finalizar_Click);
+            // 
+            // btn_pular
+            // 
+            this.btn_pular.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_pular.Location = new System.Drawing.Point(314, 210);
+            this.btn_pular.Name = "btn_pular";
+            this.btn_pular.Size = new System.Drawing.Size(202, 23);
+            this.btn_pular.TabIndex = 0;
+            this.btn_pular.Text = "Pular - 5 pontos";
+            this.btn_pular.UseVisualStyleBackColor = true;
+            this.btn_pular.Click += new System.EventHandler(this.btn_pular_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(17, 135);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 15);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Escolha a resposta correta abaixo.";
+            // 
+            // btn_addQuestao
+            // 
+            this.btn_addQuestao.Location = new System.Drawing.Point(314, 268);
+            this.btn_addQuestao.Name = "btn_addQuestao";
+            this.btn_addQuestao.Size = new System.Drawing.Size(202, 23);
+            this.btn_addQuestao.TabIndex = 0;
+            this.btn_addQuestao.Text = "Add Questões";
+            this.btn_addQuestao.UseVisualStyleBackColor = true;
+            this.btn_addQuestao.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_proximaQuestao
+            // 
+            this.btn_proximaQuestao.Location = new System.Drawing.Point(302, 396);
+            this.btn_proximaQuestao.Name = "btn_proximaQuestao";
+            this.btn_proximaQuestao.Size = new System.Drawing.Size(75, 23);
+            this.btn_proximaQuestao.TabIndex = 0;
+            this.btn_proximaQuestao.Text = "Próximo";
+            this.btn_proximaQuestao.UseVisualStyleBackColor = true;
+            this.btn_proximaQuestao.Click += new System.EventHandler(this.btn_proximaQuestao_Click);
+            // 
+            // btn_finalSair
+            // 
+            this.btn_finalSair.Location = new System.Drawing.Point(301, 260);
+            this.btn_finalSair.Name = "btn_finalSair";
+            this.btn_finalSair.Size = new System.Drawing.Size(75, 23);
+            this.btn_finalSair.TabIndex = 20;
+            this.btn_finalSair.Text = "Sair";
+            this.btn_finalSair.UseVisualStyleBackColor = true;
+            this.btn_finalSair.Click += new System.EventHandler(this.btn_finalSair_Click);
+            // 
+            // btn_finalReiniciar
+            // 
+            this.btn_finalReiniciar.Location = new System.Drawing.Point(143, 260);
+            this.btn_finalReiniciar.Name = "btn_finalReiniciar";
+            this.btn_finalReiniciar.Size = new System.Drawing.Size(75, 23);
+            this.btn_finalReiniciar.TabIndex = 19;
+            this.btn_finalReiniciar.Text = "Reiniciar";
+            this.btn_finalReiniciar.UseVisualStyleBackColor = true;
+            this.btn_finalReiniciar.Click += new System.EventHandler(this.btn_finalReiniciar_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(172, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(199, 43);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Parabéns!";
+            // 
+            // lb_pontos
+            // 
+            this.lb_pontos.AutoSize = true;
+            this.lb_pontos.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_pontos.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lb_pontos.Location = new System.Drawing.Point(320, 186);
+            this.lb_pontos.Name = "lb_pontos";
+            this.lb_pontos.Size = new System.Drawing.Size(22, 24);
+            this.lb_pontos.TabIndex = 0;
+            this.lb_pontos.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(179, 187);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(135, 19);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Sua pontuação:";
+            // 
+            // tb_dicaResposta
+            // 
+            this.tb_dicaResposta.Location = new System.Drawing.Point(288, 365);
+            this.tb_dicaResposta.Multiline = true;
+            this.tb_dicaResposta.Name = "tb_dicaResposta";
+            this.tb_dicaResposta.Size = new System.Drawing.Size(242, 51);
+            this.tb_dicaResposta.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(288, 347);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 15);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Dica de Resposta";
             // 
             // F_Quiz
             // 
@@ -477,10 +529,10 @@ namespace Portifolio_CSharp
             this.pnl_finalQuiz.PerformLayout();
             this.pnl_perguntas.ResumeLayout(false);
             this.pnl_perguntas.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.pnl_adicionarQuestoes.ResumeLayout(false);
             this.pnl_adicionarQuestoes.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -524,5 +576,9 @@ namespace Portifolio_CSharp
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_finalSair;
         private System.Windows.Forms.Button btn_finalReiniciar;
+        private System.Windows.Forms.Button btn_elimitarResposta;
+        private System.Windows.Forms.Button btn_dicaResposta;
+        private System.Windows.Forms.TextBox tb_dicaResposta;
+        private System.Windows.Forms.Label label10;
     }
 }
