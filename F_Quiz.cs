@@ -229,13 +229,21 @@ namespace Portifolio_CSharp
         }
 
         private void btn_finalizar_Click(object sender, EventArgs e)
-        {
-            // Botão de finalizar!
+        {// Botão de finalizar!
+
         }
 
         private void btn_pular_Click(object sender, EventArgs e)
-        {
-            //pular questões.
+        {//Pula questão.
+
+            if (indexQuestao >= qtdeDados)
+            {
+                MessageBox.Show("Você não pode pular a última questão.");
+                return;
+            }
+            pontos -= 5;
+            indexQuestao++;
+            dadosQuestao();
         }
 
         private void btn_elimitarResposta_Click(object sender, EventArgs e)
