@@ -1,0 +1,1 @@
+[{"id":0,"nome":"Ruan","pontos":18,"difficult":"facil"},{"id":1,"nome":"d","pontos":7,"difficult":"facil"}]

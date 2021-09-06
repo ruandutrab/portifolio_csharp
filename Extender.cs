@@ -15,8 +15,10 @@ namespace Portifolio_CSharp
         public static string diretorioDb = diretorioPrincipal + @"\db\";
         private static string directoryQuizPath = diretorioPrincipal + @"\Quiz";
         public static string fileQuizPath = directoryQuizPath + @"\quiz.txt";
-        
-        
+        public static string directoryUsersPath = diretorioPrincipal + @"\Users";
+        public static string fileUsersPath = directoryUsersPath + @"\Users.txt";
+
+
         public static List<Pergunta> LeituraDasPerguntas()
         {
             try
@@ -90,6 +92,60 @@ namespace Portifolio_CSharp
             }
             catch (Exception ex)
             {
+            }
+        }
+
+        public static List<Users> SearchUsers() // Busca por novos usuários.
+        {
+            List<Users> users = null; 
+            if (Directory.Exists(directoryUsersPath))
+            {
+                if (File.Exists(fileUsersPath))
+                {
+                    users = new List<Users>();
+                    string textUsers = File.ReadAllText(fileUsersPath, Encoding.UTF8);
+                    users = JsonConvert.DeserializeObject<List<Users>>(textUsers);
+                }
+                else
+                {
+                    Directory.CreateDirectory(directoryUsersPath);
+                    File.CreateText(fileUsersPath);
+                }
+            }
+            return users;
+
+        }
+
+        public static void WriteUsers(List<Users> users)
+        {
+            if (Directory.Exists(directoryUsersPath))
+            {
+                if (File.Exists(fileUsersPath))
+                {
+                    string textUsers = JsonConvert.SerializeObject(users);
+                    File.WriteAllText(fileUsersPath, textUsers);
+                }
+                else
+                {
+                    File.CreateText(fileUsersPath);
+                    string textUsers = JsonConvert.SerializeObject(users);
+                    File.WriteAllText(fileUsersPath, textUsers);
+                }
+            }
+            else
+            {
+                Directory.CreateDirectory(directoryUsersPath);
+                if (File.Exists(fileUsersPath))
+                {
+                    string textUsers = JsonConvert.SerializeObject(users);
+                    File.WriteAllText(fileUsersPath, textUsers);
+                }
+                else
+                {
+                    File.CreateText(fileUsersPath);
+                    string textUsers = JsonConvert.SerializeObject(users);
+                    File.WriteAllText(fileUsersPath, textUsers);
+                }
             }
         }
     }

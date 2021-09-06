@@ -37,6 +37,8 @@ namespace Portifolio_CSharp
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tb_jogador = new System.Windows.Forms.TextBox();
+            this.btn_rank = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // btn_quiz
@@ -60,7 +62,7 @@ namespace Portifolio_CSharp
             // 
             // bnt_forca
             // 
-            this.bnt_forca.Location = new System.Drawing.Point(12, 190);
+            this.bnt_forca.Location = new System.Drawing.Point(12, 188);
             this.bnt_forca.Name = "bnt_forca";
             this.bnt_forca.Size = new System.Drawing.Size(91, 23);
             this.bnt_forca.TabIndex = 2;
@@ -111,11 +113,22 @@ namespace Portifolio_CSharp
             this.tb_jogador.Size = new System.Drawing.Size(121, 23);
             this.tb_jogador.TabIndex = 7;
             // 
+            // btn_rank
+            // 
+            this.btn_rank.Location = new System.Drawing.Point(12, 264);
+            this.btn_rank.Name = "btn_rank";
+            this.btn_rank.Size = new System.Drawing.Size(91, 23);
+            this.btn_rank.TabIndex = 8;
+            this.btn_rank.Text = "Rank";
+            this.btn_rank.UseVisualStyleBackColor = true;
+            this.btn_rank.Click += new System.EventHandler(this.btn_rank_Click);
+            // 
             // F_telaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 451);
+            this.Controls.Add(this.btn_rank);
             this.Controls.Add(this.tb_jogador);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -143,8 +156,10 @@ namespace Portifolio_CSharp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tb_jogador;
         public System.Windows.Forms.ComboBox cb_niveis;
+        public System.Windows.Forms.TextBox tb_jogador;
+        private System.Windows.Forms.Button btn_rank;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

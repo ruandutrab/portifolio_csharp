@@ -17,6 +17,7 @@ namespace Portifolio_CSharp
         Form principal;
         F_telaPrincipal f_principal;
         List<Pergunta> quiz = new List<Pergunta>();
+        List<Users> usersList = new List<Users>();
         int pontos = 0;
         int indexQuestao = 0;
         int qtdeDados;
@@ -100,11 +101,13 @@ namespace Portifolio_CSharp
             {
                 btn_pular.Enabled = false;
                 btn_elimitarResposta.Enabled = false;
+                btn_dicaResposta.Enabled = false;
             } 
             else
             {
                 btn_pular.Enabled = true;
                 btn_elimitarResposta.Enabled = true;
+                btn_dicaResposta.Enabled = true;
             }
         }
 
@@ -179,6 +182,21 @@ namespace Portifolio_CSharp
             {
                 MessageBox.Show("Acabou");
                 pnl_perguntas.Visible = false;
+                List<Users> users = new List<Users>();
+                usersList = Extender.SearchUsers();
+                if (new FileInfo(Extender.fileUsersPath).Length > 5)
+                {
+                    users = usersList;
+                }
+                users.Add(new Users()
+                {
+                    id = users.Count,
+                    nome = f_principal.tb_jogador.Text,
+                    pontos = pontos,
+                    difficult = nivel
+
+                });
+                Extender.WriteUsers(users);
                 return;
             }
             indexQuestao++;

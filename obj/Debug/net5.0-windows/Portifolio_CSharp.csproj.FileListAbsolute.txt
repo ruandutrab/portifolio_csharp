@@ -53,3 +53,4 @@ C:\Users\tuanz\Documents\Flutter Projects\portifolio_csharp\bin\Debug\net5.0-win
 C:\Users\tuanz\Documents\Flutter Projects\portifolio_csharp\obj\Debug\net5.0-windows\Portifolio_CSharp.csproj.CopyComplete
 C:\Users\tuanz\Documents\Flutter Projects\portifolio_csharp\obj\Debug\net5.0-windows\Portifolio_CSharp.Properties.Resources.resources
 C:\Users\tuanz\Documents\Flutter Projects\portifolio_csharp\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\tuanz\Documents\Flutter Projects\portifolio_csharp\obj\Debug\net5.0-windows\Portifolio_CSharp.F_Rank.resources
