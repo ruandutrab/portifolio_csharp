@@ -22,7 +22,11 @@ namespace Portifolio_CSharp
         {
             List<Users> dados = new List<Users>();
             dados = Extender.SearchUsers();
-            dgv_ranking.DataSource = dados;
+            dgv_ranking.DataSource = dados.OrderByDescending(x => x.pontos).ThenBy(x => x.nome).ToList();
+            dgv_ranking.Columns[0].Visible = false;
+            dgv_ranking.Columns[1].HeaderText = "Nome";
+            dgv_ranking.Columns[2].HeaderText = "Pontos";
+            dgv_ranking.Columns[3].HeaderText = "Nível";
         }
     }
     

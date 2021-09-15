@@ -18,7 +18,7 @@ namespace Portifolio_CSharp
         F_telaPrincipal f_principal;
         List<Pergunta> quiz = new List<Pergunta>();
         List<Users> usersList = new List<Users>();
-        int pontos = 0;
+        int pontoFinal = 0;
         int indexQuestao = 0;
         int qtdeDados;
         string nivel;
@@ -97,7 +97,7 @@ namespace Portifolio_CSharp
 
         private void BotoesAux()
         {
-            if (pontos < 5)
+            if (pontoFinal < 5)
             {
                 btn_pular.Enabled = false;
                 btn_elimitarResposta.Enabled = false;
@@ -180,7 +180,6 @@ namespace Portifolio_CSharp
             CalcularResposta();
             if(indexQuestao >= qtdeDados)
             {
-                MessageBox.Show("Acabou");
                 pnl_perguntas.Visible = false;
                 List<Users> users = new List<Users>();
                 usersList = Extender.SearchUsers();
@@ -188,16 +187,37 @@ namespace Portifolio_CSharp
                 {
                     users = usersList;
                 }
-                users.Add(new Users()
+                if (usersList != null)
                 {
-                    id = users.Count,
-                    nome = f_principal.tb_jogador.Text,
-                    pontos = pontos,
-                    difficult = nivel
+                    for (int i = 0; i < usersList.Count; i++)
+                    {
+                        if (usersList[i].nome == f_principal.tb_jogador.Text)
+                        {
+                            if (pontoFinal < usersList[i].pontos) pontoFinal = usersList[i].pontos;
+                            users.Add(new Users()
+                            {
+                                id = usersList[i].id,
+                                nome = usersList[i].nome,
+                                pontos = pontoFinal,
+                                difficult = nivel
 
-                });
-                Extender.WriteUsers(users);
-                return;
+                            });
+                            usersList.RemoveAt(i);
+                            Extender.WriteUsers(users.OrderBy(x => x.id).ToList());
+                            return;
+                        }
+                    }
+                }
+                users.Add(new Users()
+                    {
+                        id = users.Count,
+                        nome = f_principal.tb_jogador.Text,
+                        pontos = pontoFinal,
+                        difficult = nivel
+
+                    });
+                    Extender.WriteUsers(users);
+                    return;
             }
             indexQuestao++;
             dadosQuestao();
@@ -209,33 +229,17 @@ namespace Portifolio_CSharp
         private void CalcularResposta()
         {
             string certaResposta = quiz[indexQuestao].respostaCerta;
-            if(rb_resposta1.Text == certaResposta && rb_resposta1.Checked == true)
-            {
-                MessageBox.Show("Certa!");
-                pontos += 6;
-            } 
-            else if (rb_resposta2.Text == certaResposta && rb_resposta2.Checked == true)
-            {
-                MessageBox.Show("Certa!");
-                pontos += 6;
-            }
-            else if (rb_resposta3.Text == certaResposta && rb_resposta3.Checked == true)
-            {
-                MessageBox.Show("Certa!");
-                pontos += 6;
-            }
-            else if (rb_resposta4.Text == certaResposta && rb_resposta4.Checked == true)
-            {
-                MessageBox.Show("Certa!");
-                pontos += 6;
-            }
-            lb_pontos.Text = pontos.ToString();
+            if (rb_resposta1.Text == certaResposta && rb_resposta1.Checked == true) pontoFinal += 1;
+            else if (rb_resposta2.Text == certaResposta && rb_resposta2.Checked == true) pontoFinal += 1;
+            else if (rb_resposta3.Text == certaResposta && rb_resposta3.Checked == true) pontoFinal += 1;
+            else if (rb_resposta4.Text == certaResposta && rb_resposta4.Checked == true) pontoFinal += 1;
+            lb_pontos.Text = pontoFinal.ToString();
         }
 
         private void btn_finalReiniciar_Click(object sender, EventArgs e)
         {
             indexQuestao = 0;
-            pontos = 0;
+            pontoFinal = 0;
             pnl_perguntas.Visible = true;
             dadosQuestao();
 
@@ -259,7 +263,7 @@ namespace Portifolio_CSharp
                 MessageBox.Show("Você não pode pular a última questão.");
                 return;
             }
-            pontos -= 5;
+            pontoFinal -= 5;
             indexQuestao++;
             dadosQuestao();
         }
@@ -271,7 +275,7 @@ namespace Portifolio_CSharp
             int question2;
             question1 =  n_random.Next(1, 3);
             question2 = n_random.Next(3, 5);
-            pontos -= 5;
+            pontoFinal -= 5;
             if(question1 == 1)
             {
                 if(rb_resposta1.Text == quiz[indexQuestao].respostaCerta)
@@ -317,7 +321,6 @@ namespace Portifolio_CSharp
                 }
             }
         }
-
         private void btn_dicaResposta_Click(object sender, EventArgs e)
         {
             // Dica de resposta.

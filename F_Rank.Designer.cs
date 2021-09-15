@@ -29,6 +29,7 @@ namespace Portifolio_CSharp
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_ranking = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -47,11 +48,26 @@ namespace Portifolio_CSharp
             // 
             this.dgv_ranking.AllowUserToAddRows = false;
             this.dgv_ranking.AllowUserToDeleteRows = false;
+            this.dgv_ranking.AllowUserToResizeColumns = false;
+            this.dgv_ranking.AllowUserToResizeRows = false;
+            this.dgv_ranking.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ranking.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ranking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_ranking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ranking.Location = new System.Drawing.Point(12, 11);
+            this.dgv_ranking.Location = new System.Drawing.Point(11, 11);
             this.dgv_ranking.Name = "dgv_ranking";
             this.dgv_ranking.ReadOnly = true;
+            this.dgv_ranking.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_ranking.RowHeadersVisible = false;
             this.dgv_ranking.RowTemplate.Height = 25;
+            this.dgv_ranking.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_ranking.Size = new System.Drawing.Size(530, 427);
             this.dgv_ranking.TabIndex = 0;
             // 
@@ -61,7 +77,10 @@ namespace Portifolio_CSharp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 451);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "F_Rank";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F_Rank";
             this.Load += new System.EventHandler(this.F_Rank_Load);
             this.panel1.ResumeLayout(false);
