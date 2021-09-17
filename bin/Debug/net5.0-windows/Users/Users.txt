@@ -1,1 +1,1 @@
-[{"id":0,"nome":"Ruan","pontos":3,"difficult":"facil"},{"id":1,"nome":"Miguel","pontos":3,"difficult":"facil"}]
+[{"id":0,"nome":"Ruan","pontos":3,"dificuldade":"medio","jogo":"quiz"},{"id":1,"nome":"Miguel","pontos":3,"dificuldade":null,"jogo":null},{"id":2,"nome":"Gabi","pontos":2,"dificuldade":null,"jogo":null},{"id":3,"nome":"Luan","pontos":2,"dificuldade":"medio","jogo":"quiz"}]

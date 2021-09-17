@@ -27,6 +27,35 @@ namespace Portifolio_CSharp
             dgv_ranking.Columns[1].HeaderText = "Nome";
             dgv_ranking.Columns[2].HeaderText = "Pontos";
             dgv_ranking.Columns[3].HeaderText = "Nível";
+            dgv_ranking.Columns[4].HeaderText = "Jogo";
+        }
+
+        private void btn_rankFacil_Click(object sender, EventArgs e)
+        {
+            List<Users> dados = new List<Users>();
+            dados = Extender.SearchUsers();
+            dgv_ranking.DataSource = dados.Where(x => x.dificuldade == "facil").ToList();
+        }
+
+        private void btn_rankMedio_Click(object sender, EventArgs e)
+        {
+            List<Users> dados = new List<Users>();
+            dados = Extender.SearchUsers();
+            dgv_ranking.DataSource = dados.Where(x => x.dificuldade == "medio").ToList();
+        }
+
+        private void btn_rankDificil_Click(object sender, EventArgs e)
+        {
+            List<Users> dados = new List<Users>();
+            dados = Extender.SearchUsers();
+            dgv_ranking.DataSource = dados.Where(x => x.dificuldade == "dificil").ToList();
+        }
+
+        private void btn_rankQuiz_Click(object sender, EventArgs e)
+        {
+            List<Users> dados = new List<Users>();
+            dados = Extender.SearchUsers();
+            dgv_ranking.DataSource = dados.Where(x => x.jogo == "quiz").ToList();
         }
     }
     

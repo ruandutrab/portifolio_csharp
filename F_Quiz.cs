@@ -199,7 +199,8 @@ namespace Portifolio_CSharp
                                 id = usersList[i].id,
                                 nome = usersList[i].nome,
                                 pontos = pontoFinal,
-                                difficult = nivel
+                                dificuldade = nivel,
+                                jogo = "quiz"
 
                             });
                             usersList.RemoveAt(i);
@@ -213,9 +214,10 @@ namespace Portifolio_CSharp
                         id = users.Count,
                         nome = f_principal.tb_jogador.Text,
                         pontos = pontoFinal,
-                        difficult = nivel
+                        dificuldade = nivel,
+                        jogo = "quiz"
 
-                    });
+                });
                     Extender.WriteUsers(users);
                     return;
             }
@@ -252,7 +254,51 @@ namespace Portifolio_CSharp
 
         private void btn_finalizar_Click(object sender, EventArgs e)
         {// Botão de finalizar!
+            if(pontoFinal >= 5)
+            {
+                pnl_perguntas.Visible = false;
+                List<Users> users = new List<Users>();
+                usersList = Extender.SearchUsers();
+                if (new FileInfo(Extender.fileUsersPath).Length > 5)
+                {
+                    users = usersList;
+                }
+                if (usersList != null)
+                {
+                    for (int i = 0; i < usersList.Count; i++)
+                    {
+                        if (usersList[i].nome == f_principal.tb_jogador.Text)
+                        {
+                            if (pontoFinal < usersList[i].pontos) pontoFinal = usersList[i].pontos;
+                            users.Add(new Users()
+                            {
+                                id = usersList[i].id,
+                                nome = usersList[i].nome,
+                                pontos = pontoFinal,
+                                dificuldade = nivel,
+                                jogo = "quiz"
 
+                            });
+                            usersList.RemoveAt(i);
+                            Extender.WriteUsers(users.OrderBy(x => x.id).ToList());
+                            return;
+                        }
+                    }
+                }
+                users.Add(new Users()
+                {
+                    id = users.Count,
+                    nome = f_principal.tb_jogador.Text,
+                    pontos = pontoFinal,
+                    dificuldade = nivel,
+                    jogo = "quiz"
+
+                });
+                Extender.WriteUsers(users);
+            } else
+            {
+                pnl_perguntas.Visible = false;
+            }
         }
 
         private void btn_pular_Click(object sender, EventArgs e)
@@ -269,7 +315,7 @@ namespace Portifolio_CSharp
         }
 
         private void btn_elimitarResposta_Click(object sender, EventArgs e)
-        {//Eliminar duas resposta.
+        {//Elimina duas resposta.
             Random n_random = new Random();
             int question1;
             int question2;

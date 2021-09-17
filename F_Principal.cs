@@ -42,20 +42,17 @@ namespace Portifolio_CSharp
             cb_niveis.DataSource = new BindingSource(niveisCb, null);
             cb_niveis.DisplayMember = "Value";
             cb_niveis.ValueMember = "Key";
-
-            /////// Evitar erros referentes aos arquivos de texto. ////////
-
-            //if (!Directory.Exists(Extender.fileUsersPath))
-            //{
-            //    Directory.CreateDirectory(Extender.directoryUsersPath);
-            //    using (var f = File.CreateText(Extender.fileUsersPath));
-            //}
         }
 
         private void btn_rank_Click(object sender, EventArgs e)
         {
             F_Rank f_Rank = new F_Rank();
             f_Rank.ShowDialog();
+        }
+
+        private void bnt_forca_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -11,7 +11,8 @@ namespace Portifolio_CSharp
         public int id { get; set; }
         public string nome { get; set; }
         public int pontos { get; set; }
-        public string difficult { get; set; }
+        public string dificuldade { get; set; }
+        public string jogo { get; set; }
     }
 
 }

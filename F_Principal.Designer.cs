@@ -68,6 +68,7 @@ namespace Portifolio_CSharp
             this.bnt_forca.TabIndex = 2;
             this.bnt_forca.Text = "Jogo da Forca";
             this.bnt_forca.UseVisualStyleBackColor = true;
+            this.bnt_forca.Click += new System.EventHandler(this.bnt_forca_Click);
             // 
             // label1
             // 

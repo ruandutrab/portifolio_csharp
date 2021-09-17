@@ -31,24 +31,6 @@ namespace Portifolio_CSharp
         {
             this.pnl_finalQuiz = new System.Windows.Forms.Panel();
             this.pnl_perguntas = new System.Windows.Forms.Panel();
-            this.btn_dicaResposta = new System.Windows.Forms.Button();
-            this.btn_elimitarResposta = new System.Windows.Forms.Button();
-            this.lb_questao = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rb_resposta1 = new System.Windows.Forms.RadioButton();
-            this.rb_resposta4 = new System.Windows.Forms.RadioButton();
-            this.rb_resposta3 = new System.Windows.Forms.RadioButton();
-            this.rb_resposta2 = new System.Windows.Forms.RadioButton();
-            this.btn_finalizar = new System.Windows.Forms.Button();
-            this.btn_pular = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_addQuestao = new System.Windows.Forms.Button();
-            this.btn_proximaQuestao = new System.Windows.Forms.Button();
-            this.btn_finalSair = new System.Windows.Forms.Button();
-            this.btn_finalReiniciar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lb_pontos = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.pnl_adicionarQuestoes = new System.Windows.Forms.Panel();
             this.tb_dicaResposta = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -70,10 +52,28 @@ namespace Portifolio_CSharp
             this.label3 = new System.Windows.Forms.Label();
             this.tb_questao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_dicaResposta = new System.Windows.Forms.Button();
+            this.btn_elimitarResposta = new System.Windows.Forms.Button();
+            this.lb_questao = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rb_resposta1 = new System.Windows.Forms.RadioButton();
+            this.rb_resposta4 = new System.Windows.Forms.RadioButton();
+            this.rb_resposta3 = new System.Windows.Forms.RadioButton();
+            this.rb_resposta2 = new System.Windows.Forms.RadioButton();
+            this.btn_finalizar = new System.Windows.Forms.Button();
+            this.btn_pular = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_addQuestao = new System.Windows.Forms.Button();
+            this.btn_proximaQuestao = new System.Windows.Forms.Button();
+            this.btn_finalSair = new System.Windows.Forms.Button();
+            this.btn_finalReiniciar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lb_pontos = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnl_finalQuiz.SuspendLayout();
             this.pnl_perguntas.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.pnl_adicionarQuestoes.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_finalQuiz
@@ -106,6 +106,214 @@ namespace Portifolio_CSharp
             this.pnl_perguntas.Name = "pnl_perguntas";
             this.pnl_perguntas.Size = new System.Drawing.Size(515, 427);
             this.pnl_perguntas.TabIndex = 17;
+            // 
+            // pnl_adicionarQuestoes
+            // 
+            this.pnl_adicionarQuestoes.Controls.Add(this.tb_dicaResposta);
+            this.pnl_adicionarQuestoes.Controls.Add(this.label10);
+            this.pnl_adicionarQuestoes.Controls.Add(this.label7);
+            this.pnl_adicionarQuestoes.Controls.Add(this.tb_respostaCerta);
+            this.pnl_adicionarQuestoes.Controls.Add(this.btn_resposta4_Certa);
+            this.pnl_adicionarQuestoes.Controls.Add(this.btn_resposta3_Certa);
+            this.pnl_adicionarQuestoes.Controls.Add(this.btn_resposta2_Certa);
+            this.pnl_adicionarQuestoes.Controls.Add(this.btn_resposta1_Certa);
+            this.pnl_adicionarQuestoes.Controls.Add(this.btn_sair);
+            this.pnl_adicionarQuestoes.Controls.Add(this.btn_salvar);
+            this.pnl_adicionarQuestoes.Controls.Add(this.tb_resposta4);
+            this.pnl_adicionarQuestoes.Controls.Add(this.label6);
+            this.pnl_adicionarQuestoes.Controls.Add(this.tb_resposta3);
+            this.pnl_adicionarQuestoes.Controls.Add(this.label5);
+            this.pnl_adicionarQuestoes.Controls.Add(this.tb_resposta2);
+            this.pnl_adicionarQuestoes.Controls.Add(this.label4);
+            this.pnl_adicionarQuestoes.Controls.Add(this.tb_resposta1);
+            this.pnl_adicionarQuestoes.Controls.Add(this.label3);
+            this.pnl_adicionarQuestoes.Controls.Add(this.tb_questao);
+            this.pnl_adicionarQuestoes.Controls.Add(this.label2);
+            this.pnl_adicionarQuestoes.Location = new System.Drawing.Point(3, 2);
+            this.pnl_adicionarQuestoes.Name = "pnl_adicionarQuestoes";
+            this.pnl_adicionarQuestoes.Size = new System.Drawing.Size(538, 456);
+            this.pnl_adicionarQuestoes.TabIndex = 16;
+            this.pnl_adicionarQuestoes.Visible = false;
+            // 
+            // tb_dicaResposta
+            // 
+            this.tb_dicaResposta.Location = new System.Drawing.Point(288, 365);
+            this.tb_dicaResposta.Multiline = true;
+            this.tb_dicaResposta.Name = "tb_dicaResposta";
+            this.tb_dicaResposta.Size = new System.Drawing.Size(242, 51);
+            this.tb_dicaResposta.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(288, 347);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 15);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Dica de Resposta";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(286, 128);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 15);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Resposta Certa!";
+            // 
+            // tb_respostaCerta
+            // 
+            this.tb_respostaCerta.Location = new System.Drawing.Point(287, 146);
+            this.tb_respostaCerta.Multiline = true;
+            this.tb_respostaCerta.Name = "tb_respostaCerta";
+            this.tb_respostaCerta.ReadOnly = true;
+            this.tb_respostaCerta.Size = new System.Drawing.Size(241, 51);
+            this.tb_respostaCerta.TabIndex = 16;
+            // 
+            // btn_resposta4_Certa
+            // 
+            this.btn_resposta4_Certa.Location = new System.Drawing.Point(250, 393);
+            this.btn_resposta4_Certa.Name = "btn_resposta4_Certa";
+            this.btn_resposta4_Certa.Size = new System.Drawing.Size(24, 23);
+            this.btn_resposta4_Certa.TabIndex = 15;
+            this.btn_resposta4_Certa.Text = "R";
+            this.btn_resposta4_Certa.UseVisualStyleBackColor = true;
+            this.btn_resposta4_Certa.Click += new System.EventHandler(this.btn_resposta4_Certa_Click);
+            // 
+            // btn_resposta3_Certa
+            // 
+            this.btn_resposta3_Certa.Location = new System.Drawing.Point(250, 321);
+            this.btn_resposta3_Certa.Name = "btn_resposta3_Certa";
+            this.btn_resposta3_Certa.Size = new System.Drawing.Size(24, 23);
+            this.btn_resposta3_Certa.TabIndex = 14;
+            this.btn_resposta3_Certa.Text = "R";
+            this.btn_resposta3_Certa.UseVisualStyleBackColor = true;
+            this.btn_resposta3_Certa.Click += new System.EventHandler(this.btn_resposta3_Certa_Click);
+            // 
+            // btn_resposta2_Certa
+            // 
+            this.btn_resposta2_Certa.Location = new System.Drawing.Point(250, 246);
+            this.btn_resposta2_Certa.Name = "btn_resposta2_Certa";
+            this.btn_resposta2_Certa.Size = new System.Drawing.Size(24, 23);
+            this.btn_resposta2_Certa.TabIndex = 13;
+            this.btn_resposta2_Certa.Text = "R";
+            this.btn_resposta2_Certa.UseVisualStyleBackColor = true;
+            this.btn_resposta2_Certa.Click += new System.EventHandler(this.btn_resposta2_Certa_Click);
+            // 
+            // btn_resposta1_Certa
+            // 
+            this.btn_resposta1_Certa.Location = new System.Drawing.Point(250, 175);
+            this.btn_resposta1_Certa.Name = "btn_resposta1_Certa";
+            this.btn_resposta1_Certa.Size = new System.Drawing.Size(24, 23);
+            this.btn_resposta1_Certa.TabIndex = 12;
+            this.btn_resposta1_Certa.Text = "R";
+            this.btn_resposta1_Certa.UseVisualStyleBackColor = true;
+            this.btn_resposta1_Certa.Click += new System.EventHandler(this.btn_resposta1_Certa_Click);
+            // 
+            // btn_sair
+            // 
+            this.btn_sair.Location = new System.Drawing.Point(244, 430);
+            this.btn_sair.Name = "btn_sair";
+            this.btn_sair.Size = new System.Drawing.Size(75, 23);
+            this.btn_sair.TabIndex = 11;
+            this.btn_sair.Text = "Sair";
+            this.btn_sair.UseVisualStyleBackColor = true;
+            this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
+            // 
+            // btn_salvar
+            // 
+            this.btn_salvar.Location = new System.Drawing.Point(8, 430);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn_salvar.TabIndex = 10;
+            this.btn_salvar.Text = "Salvar";
+            this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
+            // 
+            // tb_resposta4
+            // 
+            this.tb_resposta4.Location = new System.Drawing.Point(8, 365);
+            this.tb_resposta4.Multiline = true;
+            this.tb_resposta4.Name = "tb_resposta4";
+            this.tb_resposta4.Size = new System.Drawing.Size(242, 51);
+            this.tb_resposta4.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 347);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 15);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Resposta 04";
+            // 
+            // tb_resposta3
+            // 
+            this.tb_resposta3.Location = new System.Drawing.Point(9, 293);
+            this.tb_resposta3.Multiline = true;
+            this.tb_resposta3.Name = "tb_resposta3";
+            this.tb_resposta3.Size = new System.Drawing.Size(241, 51);
+            this.tb_resposta3.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 275);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 15);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Resposta 03";
+            // 
+            // tb_resposta2
+            // 
+            this.tb_resposta2.Location = new System.Drawing.Point(8, 218);
+            this.tb_resposta2.Multiline = true;
+            this.tb_resposta2.Name = "tb_resposta2";
+            this.tb_resposta2.Size = new System.Drawing.Size(242, 51);
+            this.tb_resposta2.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 15);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Resposta 02";
+            // 
+            // tb_resposta1
+            // 
+            this.tb_resposta1.Location = new System.Drawing.Point(9, 146);
+            this.tb_resposta1.Multiline = true;
+            this.tb_resposta1.Name = "tb_resposta1";
+            this.tb_resposta1.Size = new System.Drawing.Size(241, 51);
+            this.tb_resposta1.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Resposta 01";
+            // 
+            // tb_questao
+            // 
+            this.tb_questao.Location = new System.Drawing.Point(8, 25);
+            this.tb_questao.Multiline = true;
+            this.tb_questao.Name = "tb_questao";
+            this.tb_questao.Size = new System.Drawing.Size(341, 89);
+            this.tb_questao.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Adicionar Questões";
             // 
             // btn_dicaResposta
             // 
@@ -304,214 +512,6 @@ namespace Portifolio_CSharp
             this.label8.TabIndex = 12;
             this.label8.Text = "Sua pontuação:";
             // 
-            // pnl_adicionarQuestoes
-            // 
-            this.pnl_adicionarQuestoes.Controls.Add(this.tb_dicaResposta);
-            this.pnl_adicionarQuestoes.Controls.Add(this.label10);
-            this.pnl_adicionarQuestoes.Controls.Add(this.label7);
-            this.pnl_adicionarQuestoes.Controls.Add(this.tb_respostaCerta);
-            this.pnl_adicionarQuestoes.Controls.Add(this.btn_resposta4_Certa);
-            this.pnl_adicionarQuestoes.Controls.Add(this.btn_resposta3_Certa);
-            this.pnl_adicionarQuestoes.Controls.Add(this.btn_resposta2_Certa);
-            this.pnl_adicionarQuestoes.Controls.Add(this.btn_resposta1_Certa);
-            this.pnl_adicionarQuestoes.Controls.Add(this.btn_sair);
-            this.pnl_adicionarQuestoes.Controls.Add(this.btn_salvar);
-            this.pnl_adicionarQuestoes.Controls.Add(this.tb_resposta4);
-            this.pnl_adicionarQuestoes.Controls.Add(this.label6);
-            this.pnl_adicionarQuestoes.Controls.Add(this.tb_resposta3);
-            this.pnl_adicionarQuestoes.Controls.Add(this.label5);
-            this.pnl_adicionarQuestoes.Controls.Add(this.tb_resposta2);
-            this.pnl_adicionarQuestoes.Controls.Add(this.label4);
-            this.pnl_adicionarQuestoes.Controls.Add(this.tb_resposta1);
-            this.pnl_adicionarQuestoes.Controls.Add(this.label3);
-            this.pnl_adicionarQuestoes.Controls.Add(this.tb_questao);
-            this.pnl_adicionarQuestoes.Controls.Add(this.label2);
-            this.pnl_adicionarQuestoes.Location = new System.Drawing.Point(2, 0);
-            this.pnl_adicionarQuestoes.Name = "pnl_adicionarQuestoes";
-            this.pnl_adicionarQuestoes.Size = new System.Drawing.Size(538, 456);
-            this.pnl_adicionarQuestoes.TabIndex = 16;
-            this.pnl_adicionarQuestoes.Visible = false;
-            // 
-            // tb_dicaResposta
-            // 
-            this.tb_dicaResposta.Location = new System.Drawing.Point(288, 365);
-            this.tb_dicaResposta.Multiline = true;
-            this.tb_dicaResposta.Name = "tb_dicaResposta";
-            this.tb_dicaResposta.Size = new System.Drawing.Size(242, 51);
-            this.tb_dicaResposta.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(288, 347);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 15);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Dica de Resposta";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(286, 128);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 15);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Resposta Certa!";
-            // 
-            // tb_respostaCerta
-            // 
-            this.tb_respostaCerta.Location = new System.Drawing.Point(287, 146);
-            this.tb_respostaCerta.Multiline = true;
-            this.tb_respostaCerta.Name = "tb_respostaCerta";
-            this.tb_respostaCerta.ReadOnly = true;
-            this.tb_respostaCerta.Size = new System.Drawing.Size(241, 51);
-            this.tb_respostaCerta.TabIndex = 16;
-            // 
-            // btn_resposta4_Certa
-            // 
-            this.btn_resposta4_Certa.Location = new System.Drawing.Point(250, 393);
-            this.btn_resposta4_Certa.Name = "btn_resposta4_Certa";
-            this.btn_resposta4_Certa.Size = new System.Drawing.Size(24, 23);
-            this.btn_resposta4_Certa.TabIndex = 15;
-            this.btn_resposta4_Certa.Text = "R";
-            this.btn_resposta4_Certa.UseVisualStyleBackColor = true;
-            this.btn_resposta4_Certa.Click += new System.EventHandler(this.btn_resposta4_Certa_Click);
-            // 
-            // btn_resposta3_Certa
-            // 
-            this.btn_resposta3_Certa.Location = new System.Drawing.Point(250, 321);
-            this.btn_resposta3_Certa.Name = "btn_resposta3_Certa";
-            this.btn_resposta3_Certa.Size = new System.Drawing.Size(24, 23);
-            this.btn_resposta3_Certa.TabIndex = 14;
-            this.btn_resposta3_Certa.Text = "R";
-            this.btn_resposta3_Certa.UseVisualStyleBackColor = true;
-            this.btn_resposta3_Certa.Click += new System.EventHandler(this.btn_resposta3_Certa_Click);
-            // 
-            // btn_resposta2_Certa
-            // 
-            this.btn_resposta2_Certa.Location = new System.Drawing.Point(250, 246);
-            this.btn_resposta2_Certa.Name = "btn_resposta2_Certa";
-            this.btn_resposta2_Certa.Size = new System.Drawing.Size(24, 23);
-            this.btn_resposta2_Certa.TabIndex = 13;
-            this.btn_resposta2_Certa.Text = "R";
-            this.btn_resposta2_Certa.UseVisualStyleBackColor = true;
-            this.btn_resposta2_Certa.Click += new System.EventHandler(this.btn_resposta2_Certa_Click);
-            // 
-            // btn_resposta1_Certa
-            // 
-            this.btn_resposta1_Certa.Location = new System.Drawing.Point(250, 175);
-            this.btn_resposta1_Certa.Name = "btn_resposta1_Certa";
-            this.btn_resposta1_Certa.Size = new System.Drawing.Size(24, 23);
-            this.btn_resposta1_Certa.TabIndex = 12;
-            this.btn_resposta1_Certa.Text = "R";
-            this.btn_resposta1_Certa.UseVisualStyleBackColor = true;
-            this.btn_resposta1_Certa.Click += new System.EventHandler(this.btn_resposta1_Certa_Click);
-            // 
-            // btn_sair
-            // 
-            this.btn_sair.Location = new System.Drawing.Point(244, 430);
-            this.btn_sair.Name = "btn_sair";
-            this.btn_sair.Size = new System.Drawing.Size(75, 23);
-            this.btn_sair.TabIndex = 11;
-            this.btn_sair.Text = "Sair";
-            this.btn_sair.UseVisualStyleBackColor = true;
-            this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
-            // 
-            // btn_salvar
-            // 
-            this.btn_salvar.Location = new System.Drawing.Point(8, 430);
-            this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn_salvar.TabIndex = 10;
-            this.btn_salvar.Text = "Salvar";
-            this.btn_salvar.UseVisualStyleBackColor = true;
-            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
-            // 
-            // tb_resposta4
-            // 
-            this.tb_resposta4.Location = new System.Drawing.Point(8, 365);
-            this.tb_resposta4.Multiline = true;
-            this.tb_resposta4.Name = "tb_resposta4";
-            this.tb_resposta4.Size = new System.Drawing.Size(242, 51);
-            this.tb_resposta4.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 347);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 15);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Resposta 04";
-            // 
-            // tb_resposta3
-            // 
-            this.tb_resposta3.Location = new System.Drawing.Point(9, 293);
-            this.tb_resposta3.Multiline = true;
-            this.tb_resposta3.Name = "tb_resposta3";
-            this.tb_resposta3.Size = new System.Drawing.Size(241, 51);
-            this.tb_resposta3.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 275);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 15);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Resposta 03";
-            // 
-            // tb_resposta2
-            // 
-            this.tb_resposta2.Location = new System.Drawing.Point(8, 218);
-            this.tb_resposta2.Multiline = true;
-            this.tb_resposta2.Name = "tb_resposta2";
-            this.tb_resposta2.Size = new System.Drawing.Size(242, 51);
-            this.tb_resposta2.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 200);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Resposta 02";
-            // 
-            // tb_resposta1
-            // 
-            this.tb_resposta1.Location = new System.Drawing.Point(9, 146);
-            this.tb_resposta1.Multiline = true;
-            this.tb_resposta1.Name = "tb_resposta1";
-            this.tb_resposta1.Size = new System.Drawing.Size(241, 51);
-            this.tb_resposta1.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Resposta 01";
-            // 
-            // tb_questao
-            // 
-            this.tb_questao.Location = new System.Drawing.Point(8, 25);
-            this.tb_questao.Multiline = true;
-            this.tb_questao.Name = "tb_questao";
-            this.tb_questao.Size = new System.Drawing.Size(341, 89);
-            this.tb_questao.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Adicionar Questões";
-            // 
             // F_Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -529,10 +529,10 @@ namespace Portifolio_CSharp
             this.pnl_finalQuiz.PerformLayout();
             this.pnl_perguntas.ResumeLayout(false);
             this.pnl_perguntas.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.pnl_adicionarQuestoes.ResumeLayout(false);
             this.pnl_adicionarQuestoes.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
